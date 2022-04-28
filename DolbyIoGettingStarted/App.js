@@ -130,7 +130,7 @@ const App = () => {
                 await requestPermissions();
             }
 
-            // Initialize the Voxeet SDK
+            // Initialize the SDK
             // Please read the documentation at:
             // https://docs.dolby.io/communications-apis/docs/initializing-javascript
             // Generate a test client access token from the Dolby.io dashboard and insert into access_token variable
