@@ -135,13 +135,9 @@ const App = () => {
             // https://docs.dolby.io/communications-apis/docs/initializing-javascript
             // Generate a test client access token from the Dolby.io dashboard and insert into access_token variable
             let access_token = 'TestClientAccessToken';
-            await CommsAPI.initializeToken(access_token, isExpired => {
+            await CommsAPI.initializeToken(access_token, () => {
               return new Promise((resolve, reject) => {
-                if (isExpired) {
-                  reject('The access token has expired.');
-                } else {
-                  resolve(access_token);
-                }
+                resolve(access_token);
               });
             });
 
