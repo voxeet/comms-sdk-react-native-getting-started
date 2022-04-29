@@ -130,11 +130,16 @@ const App = () => {
                 await requestPermissions();
             }
 
-            // Initialization of the SDK...
-            // WARNING: It is best practice to use the initializeToken function to initialize the SDK.
+            // Initialize the SDK
             // Please read the documentation at:
-            // https://docs.dolby.io/communications-apis/docs/rn-client-sdk-references-commsapi#initializetoken
-            await CommsAPI.initialize(APP_KEY, APP_SECRET);
+            // https://docs.dolby.io/communications-apis/docs/initializing-javascript
+            // Generate a test client access token from the Dolby.io dashboard and insert into access_token variable
+            let access_token = 'TestClientAccessToken';
+            await CommsAPI.initializeToken(access_token, () => {
+              return new Promise((resolve, reject) => {
+                resolve(access_token);
+              });
+            });
 
             const rand = Math.round(Math.random() * 10000);
             await CommsAPI.session.open({ name: `user-${rand}` });
