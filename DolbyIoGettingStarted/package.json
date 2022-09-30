@@ -12,7 +12,7 @@
   "dependencies": {
     "@dolbyio/comms-sdk-react-native": "^3.6.0",
     "react": "17.0.2",
-    "react-native": "0.67.2"
+    "react-native": "0.70.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
