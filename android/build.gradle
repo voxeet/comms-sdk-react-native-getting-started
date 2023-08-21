@@ -4,7 +4,7 @@ buildscript {
     ext {
         buildToolsVersion = "31.0.0"
         minSdkVersion = 21
-        compileSdkVersion = 31
+        compileSdkVersion = 33
         targetSdkVersion = 31
 
         if (System.properties['os.arch'] == "aarch64") {
@@ -47,9 +47,5 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
-        maven {
-            url "https://android-sdk.voxeet.com/release"
-            content { includeGroup "com.voxeet.sdk" }
-        }
     }
 }

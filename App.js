@@ -8,7 +8,6 @@ import {
     useColorScheme,
     View,
     Button,
-    TextInput,
     Platform,
     PermissionsAndroid,
 } from 'react-native';
@@ -178,11 +177,6 @@ const App = () => {
                         backgroundColor: isDarkMode ? Colors.black : Colors.white,
                     }}>
                     <Section title="Conference">
-                        <Text>Alias:</Text>
-                        <TextInput
-                            style={styles.textInput}
-                            onChangeText={setConferenceAlias}
-                            value={conferenceAlias} />
                         <Button onPress={joinConference} title="Join the conference" />
                     </Section>
 
@@ -220,13 +214,6 @@ const styles = StyleSheet.create({
         marginTop: 8,
         fontSize: 18,
         fontWeight: '400',
-    },
-    textInput: {
-        height: Platform.OS == 'android' ? 40 : 20,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-        lineHeight: 14,
     },
 });
 
