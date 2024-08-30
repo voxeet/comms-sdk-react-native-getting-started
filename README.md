@@ -1,3 +1,5 @@
+# :warning: This repository is no longer maintained :warning:
+
 [![License](https://img.shields.io/github/license/dolbyio-samples/comms-sdk-react-native-getting-started)](LICENSE)
 
 # Dolby.io Communications SDK for React Native - Getting Started
